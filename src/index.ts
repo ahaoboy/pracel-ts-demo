@@ -3,4 +3,4 @@ import { sum } from './sum'
 
 export { fib, sum }
 
-console.log('hello')
+console.log('hello world')
