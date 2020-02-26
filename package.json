@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "npx parcel ./src/index.ts --target node --bundle-node-modules",
     "build": "npx parcel build ./src/index.ts",
-    "test": "jest  && codecov"
+    "test": "jest --coverage"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
