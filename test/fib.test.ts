@@ -1,5 +1,6 @@
 import { fib } from "../src/fib"
 describe("fib test", () => {
+    a+b
     test("test 0", () => {
         expect(fib(0)).toBe(0);
     })
