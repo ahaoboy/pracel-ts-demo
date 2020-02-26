@@ -17,6 +17,6 @@ deploy:
   file: "$TRAVIS_BUILD_DIR/dist/index.js"
   api_key:
     secure: "$API_KEY"
-  # on:
-    # tags: true
+  on:
+    tags: true
   # jdk: oraclejdk8
