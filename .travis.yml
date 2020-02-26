@@ -18,5 +18,5 @@ deploy:
   api_key:
     secure: "$API_KEY"
   on:
-    tags: true
+    tags: true #发布  tag版 时才进行发包   
   # jdk: oraclejdk8
