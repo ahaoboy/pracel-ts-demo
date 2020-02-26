@@ -2,7 +2,11 @@
   "scripts": {
     "dev": "npx parcel ./src/index.ts --target node --bundle-node-modules",
     "build": "npx parcel build ./src/index.ts",
-    "test": "jest --coverage"
+    "test": "jest  && codecov"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
