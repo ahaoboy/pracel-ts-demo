@@ -1,1 +1,1 @@
-[![Build Status](https://img.shields.io/travis/xcatliu/pagic.svg)](https://travis-ci.org/xcatliu/pagic)
+[![Build Status](https://travis-ci.com/ahaoboy/pracel-ts-demo.svg?branch=master)](https://travis-ci.com/ahaoboy/pracel-ts-demo)
