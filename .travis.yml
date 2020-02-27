@@ -18,8 +18,6 @@ after_success:
   # - git push --force --quiet https://abcd@github.com/ahaoboy/pracel-ts-demo.git master:gh-pages
   - git push --force --quiet "https://${API_KEY}@${GH_REF}" master:gh-pages
 # 可以进行其他操作,包括改名或压缩
-# before_deploy:
-# cp $TRAVIS_BUILD_DIR/dist/index.js index.js
 
 deploy:
   provider: releases
