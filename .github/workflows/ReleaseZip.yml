@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: install
+        run: | 
+            npm i
+            npm run build
+            npm run download
+            npm run zip
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./zip/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

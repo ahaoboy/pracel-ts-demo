@@ -4,7 +4,9 @@
     "build": "npx parcel build ./src/index.ts",
     "pages": "npx parcel build ./example/index.html -d pages --no-source-maps --public-url https://ahaoboy.github.io/pracel-ts-demo/",
     "pages3": "npx parcel build ./example/index.html -d pages --no-source-maps --public-url ./",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "download": "node ./src/download.js",
+    "zip":"node ./src/zip.js"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -15,9 +17,13 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-typescript": "^7.8.3",
     "@types/jest": "^25.1.3",
+    "archiver": "^3.1.1",
+    "axios": "^0.19.2",
     "babel-jest": "^25.1.0",
+    "fs-extra": "^8.1.0",
     "jest": "^25.1.0",
     "parcel-bundler": "^1.12.4",
+    "rxjs": "^6.5.4",
     "typescript": "^3.8.2"
   }
 }
