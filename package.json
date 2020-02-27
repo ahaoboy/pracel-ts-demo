@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "npx parcel ./src/index.ts --target node --bundle-node-modules",
     "build": "npx parcel build ./src/index.ts",
+    "pages": "npx parcel build ./example/index.html --out-dir pages --no-source-maps",
     "test": "jest --coverage"
   },
   "jest": {
