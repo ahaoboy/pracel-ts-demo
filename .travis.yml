@@ -15,6 +15,7 @@ after_success:
   - git config user.email "504595380@qq.com"
   - git add . 
   - git commit -m "自动更新pages"
+  # - git push --force --quiet https://abcd@github.com/ahaoboy/pracel-ts-demo.git master:gh-pages
   - git push --force --quiet "https://${API_KEY}@${GH_REF}" master:gh-pages
 # 可以进行其他操作,包括改名或压缩
 # before_deploy:
@@ -32,4 +33,4 @@ deploy:
     
 env:
  global:
-   - GH_REF: "https://github.com/ahaoboy/pracel-ts-demo.git"  # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
+   - GH_REF: "github.com/ahaoboy/pracel-ts-demo.git"  # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
