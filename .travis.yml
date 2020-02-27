@@ -1,34 +1,34 @@
-language: node_js
-node_js:
-  - 'stable'
-script:
-  - npm install codecov -g
-  - npm run build
-  - npm run pages
-  - npm run test
-after_success:
-  - codecov
-  # 更新 github-pages
-  - cd ./pages
-  - git init
-  - git config user.name "ahaoboy"
-  - git config user.email "504595380@qq.com"
-  - git add . 
-  - git commit -m "自动更新pages"
-  # - git push --force --quiet https://abcd@github.com/ahaoboy/pracel-ts-demo.git master:gh-pages
-  - git push --force --quiet "https://${API_KEY}@${GH_REF}" master:gh-pages
-# 可以进行其他操作,包括改名或压缩
+# language: node_js
+# node_js:
+#   - 'stable'
+# script:
+#   - npm install codecov -g
+#   - npm run build
+#   - npm run pages
+#   - npm run test
+# after_success:
+#   - codecov
+#   # 更新 github-pages
+#   - cd ./pages
+#   - git init
+#   - git config user.name "ahaoboy"
+#   - git config user.email "504595380@qq.com"
+#   - git add . 
+#   - git commit -m "自动更新pages"
+#   # - git push --force --quiet https://abcd@github.com/ahaoboy/pracel-ts-demo.git master:gh-pages
+#   - git push --force --quiet "https://${API_KEY}@${GH_REF}" master:gh-pages
+# # 可以进行其他操作,包括改名或压缩
 
-deploy:
-  provider: releases
-  skip_cleanup: true
-  file: "$TRAVIS_BUILD_DIR/dist/index.js"
-  api_key:
-    secure: "$API_KEY"
-  on:
-    tags: true #发布  tag版 时才进行发包   
-    draft: false # 不发表drafs
+# deploy:
+#   provider: releases
+#   skip_cleanup: true
+#   file: "$TRAVIS_BUILD_DIR/dist/index.js"
+#   api_key:
+#     secure: "$API_KEY"
+#   on:
+#     tags: true #发布  tag版 时才进行发包   
+#     draft: false # 不发表drafs
     
-env:
- global:
-   - GH_REF: "github.com/ahaoboy/pracel-ts-demo.git"  # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git
+# env:
+#  global:
+#    - GH_REF: "github.com/ahaoboy/pracel-ts-demo.git"  # 就是你github上存放静态博客最终文件的仓库地址末尾加上.git

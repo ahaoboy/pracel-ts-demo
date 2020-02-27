@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  build and test:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,7 +18,7 @@ jobs:
          
   pages:
     runs-on: ubuntu-latest
-    needs: [build and test]
+    needs: [build-and-test]
     steps:
     - uses: actions/checkout@v2
     - name: post pages
