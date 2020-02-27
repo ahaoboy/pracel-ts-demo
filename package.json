@@ -3,6 +3,7 @@
     "dev": "npx parcel ./src/index.ts --target node --bundle-node-modules",
     "build": "npx parcel build ./src/index.ts",
     "pages": "npx parcel build ./example/index.html -d pages --no-source-maps --public-url https://ahaoboy.github.io/pracel-ts-demo/",
+    "pages3": "npx parcel build ./example/index.html -d pages --no-source-maps --public-url ./",
     "test": "jest --coverage"
   },
   "jest": {
