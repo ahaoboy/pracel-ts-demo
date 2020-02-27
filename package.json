@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "npx parcel ./src/index.ts --target node --bundle-node-modules",
     "build": "npx parcel build ./src/index.ts",
-    "pages": "npx parcel build ./example/index.html --out-dir pages --no-source-maps",
+    "pages": "npx parcel build ./example/index.html -d pages --no-source-maps --public-url https://ahaoboy.github.io/pracel-ts-demo/",
     "test": "jest --coverage"
   },
   "jest": {
